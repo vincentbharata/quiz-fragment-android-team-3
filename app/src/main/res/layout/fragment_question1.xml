@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soal 1 / 5"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apa kepanjangan dari HTML?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_q1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp">
+
+        <RadioButton
+            android:id="@+id/radio_q1_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A. Hyperlink Text Markup Language"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <RadioButton
+            android:id="@+id/radio_q1_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B. HyperText Markup Language"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <RadioButton
+            android:id="@+id/radio_q1_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C. Home Tool Markup Language"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <RadioButton
+            android:id="@+id/radio_q1_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D. Hyper Transfer Markup Language"
+            android:textSize="16sp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_next_q1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selanjutnya"
+        android:layout_gravity="end" />
+
+</LinearLayout>

@@ -1,3 +1,79 @@
 <resources>
-    <string name="app_name">Kuis Interaktif Fragment</string>
+    <string name="app_name">Kuis Interaktif</string>
+
+    <!-- App Title & Description -->
+    <string name="app_title">🧠 Kuis Interaktif</string>
+    <string name="app_description">Jawab 5 pertanyaan untuk menguji pengetahuan Anda!</string>
+    <string name="result_title">🏆 Hasil Kuis</string>
+
+    <!-- Question Progress -->
+    <string name="question_progress_1">Soal 1 / 5</string>
+    <string name="question_progress_2">Soal 2 / 5</string>
+    <string name="question_progress_3">Soal 3 / 5</string>
+    <string name="question_progress_4">Soal 4 / 5</string>
+    <string name="question_progress_5">Soal 5 / 5</string>
+
+    <!-- Questions -->
+    <string name="question_1">Apa kepanjangan dari HTML?</string>
+    <string name="question_2">Bahasa pemrograman apa yang digunakan untuk Android?</string>
+    <string name="question_3">Apa fungsi utama dari CSS?</string>
+    <string name="question_4">Database apa yang paling populer untuk aplikasi mobile?</string>
+    <string name="question_5">Apa kepanjangan dari API?</string>
+
+    <!-- Question 1 Answers -->
+    <string name="q1_a">A. Hyperlink Text Markup Language</string>
+    <string name="q1_b">B. HyperText Markup Language</string>
+    <string name="q1_c">C. Home Tool Markup Language</string>
+    <string name="q1_d">D. Hyper Transfer Markup Language</string>
+
+    <!-- Question 2 Answers -->
+    <string name="q2_a">A. Kotlin</string>
+    <string name="q2_b">B. Swift</string>
+    <string name="q2_c">C. JavaScript</string>
+    <string name="q2_d">D. Python</string>
+
+    <!-- Question 3 Answers -->
+    <string name="q3_a">A. Membuat database</string>
+    <string name="q3_b">B. Mengelola server</string>
+    <string name="q3_c">C. Styling dan tampilan halaman web</string>
+    <string name="q3_d">D. Membuat aplikasi mobile</string>
+
+    <!-- Question 4 Answers -->
+    <string name="q4_a">A. MySQL</string>
+    <string name="q4_b">B. PostgreSQL</string>
+    <string name="q4_c">C. Oracle</string>
+    <string name="q4_d">D. SQLite</string>
+
+    <!-- Question 5 Answers -->
+    <string name="q5_a">A. Application Process Interface</string>
+    <string name="q5_b">B. Application Programming Interface</string>
+    <string name="q5_c">C. Advanced Programming Interface</string>
+    <string name="q5_d">D. Application Protocol Interface</string>
+
+    <!-- Buttons -->
+    <string name="btn_start">Mulai Kuis</string>
+    <string name="btn_next">Selanjutnya</string>
+    <string name="btn_finish">Selesai</string>
+    <string name="btn_restart">Mulai Lagi</string>
+
+    <!-- Messages -->
+    <string name="select_answer">Pilih jawaban terlebih dahulu!</string>
+    <string name="perfect_score">🎉 Sempurna! Anda menguasai materi dengan baik!</string>
+    <string name="good_score">👏 Bagus sekali! Hampir sempurna!</string>
+    <string name="average_score">👍 Lumayan! Masih bisa diperbaiki.</string>
+    <string name="below_average">😊 Cukup, tapi perlu belajar lagi.</string>
+    <string name="poor_score">😅 Yuk belajar lagi untuk hasil yang lebih baik!</string>
+
+    <!-- Score Display -->
+    <string name="score_format">Skor Anda: %1$d / 5 (%2$d%%)</string>
+    <string name="score_placeholder">Skor Anda: 0 / 5</string>
+    <string name="detail_answers">Detail Jawaban:</string>
+    <string name="question_correct">Soal %1$d: ✓</string>
+    <string name="question_wrong">Soal %1$d: ✗</string>
+
+    <!-- Additional Strings -->
+    <string name="loading">Memuat...</string>
+    <string name="error_general">Terjadi kesalahan. Silakan coba lagi.</string>
+    <string name="motivational_message">Pesan motivasi</string>
+    <string name="detail_placeholder">Detail jawaban</string>
 </resources>

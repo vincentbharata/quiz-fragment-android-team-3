@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soal 3 / 5"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apa fungsi utama dari CSS?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_q3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp">
+
+        <RadioButton
+            android:id="@+id/radio_q3_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A. Membuat database"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <RadioButton
+            android:id="@+id/radio_q3_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B. Mengelola server"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <RadioButton
+            android:id="@+id/radio_q3_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C. Styling dan tampilan halaman web"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <RadioButton
+            android:id="@+id/radio_q3_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D. Membuat aplikasi mobile"
+            android:textSize="16sp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_next_q3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selanjutnya"
+        android:layout_gravity="end" />
+
+</LinearLayout>

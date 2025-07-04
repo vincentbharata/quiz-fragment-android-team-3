@@ -36,6 +36,7 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
     }
 }
 
@@ -49,6 +50,9 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.fragment.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation("com.google.android.material:material:1.11.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
