@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.kuisinteraktiffragment.MainActivity
 import com.example.kuisinteraktiffragment.R
-import com.example.kuisinteraktiffragment.databinding.FragmentQuestionBinding
+import com.example.kuisinteraktiffragment.databinding.FragmentQuestionSimpleBinding
 
 class Question2Fragment : Fragment() {
-    private var _binding: FragmentQuestionBinding? = null
+    private var _binding: FragmentQuestionSimpleBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -18,7 +18,7 @@ class Question2Fragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentQuestionBinding.inflate(inflater, container, false)
+        _binding = FragmentQuestionSimpleBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -52,14 +52,12 @@ class Question2Fragment : Fragment() {
             }
 
             if (selectedIndex != -1) {
-                // Save answer in MainActivity
                 (requireActivity() as MainActivity).answer2 = selectedIndex
                 binding.btnNext.isEnabled = true
             }
         }
 
         binding.btnNext.setOnClickListener {
-            // Navigate to Question3Fragment
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, Question3Fragment())
                 .addToBackStack(null)

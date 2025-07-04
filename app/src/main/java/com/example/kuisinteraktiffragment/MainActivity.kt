@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         var score = 0
 
         // Correct answers for each question (0-3)
-        val correctAnswers = arrayOf(2, 1, 2, 1, 2) // SQL, COUNT(*), cleaning data, Pandas, visualisasi data
+        val correctAnswers = arrayOf(2, 1, 2, 1, 2)
 
         if (answer1 == correctAnswers[0]) score++
         if (answer2 == correctAnswers[1]) score++

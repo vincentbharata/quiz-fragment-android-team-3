@@ -26,10 +26,13 @@ class StartFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnStartQuiz.setOnClickListener {
+            android.util.Log.d("StartFragment", "Start Quiz button clicked")
+
             // Reset answers in MainActivity
             (requireActivity() as MainActivity).resetAnswers()
 
             // Navigate to Question1Fragment
+            android.util.Log.d("StartFragment", "Navigating to Question1Fragment")
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, Question1Fragment())
                 .addToBackStack(null)

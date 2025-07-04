@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.kuisinteraktiffragment.MainActivity
 import com.example.kuisinteraktiffragment.R
-import com.example.kuisinteraktiffragment.databinding.FragmentQuestionBinding
+import com.example.kuisinteraktiffragment.databinding.FragmentQuestionSimpleBinding
 
 class Question5Fragment : Fragment() {
-    private var _binding: FragmentQuestionBinding? = null
+    private var _binding: FragmentQuestionSimpleBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -18,7 +18,7 @@ class Question5Fragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentQuestionBinding.inflate(inflater, container, false)
+        _binding = FragmentQuestionSimpleBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -41,7 +41,7 @@ class Question5Fragment : Fragment() {
         binding.radioOption4.text = "Menyimpan data ke dalam database"
 
         // Change button text for last question
-        binding.btnNext.text = "Lihat Hasil"
+        binding.btnNext.text = "LIHAT HASIL"
     }
 
     private fun setupListeners() {

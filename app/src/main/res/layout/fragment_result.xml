@@ -1,99 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
-    android:padding="24dp"
-    tools:context=".fragments.ResultFragment">
+    android:orientation="vertical"
+    android:background="@drawable/bg_main"
+    android:padding="32dp"
+    android:gravity="center">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
+    <!-- Result Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical"
+        android:background="@drawable/bg_card"
+        android:padding="40dp"
+        android:elevation="4dp">
 
+        <!-- Result Icon -->
+        <ImageView
+            android:id="@+id/iv_result_icon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/ic_trophy_enhanced"
+            android:contentDescription="Result Icon" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:text="Kuis Selesai!"
+            android:textColor="#212529"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Score Card -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="32dp">
-
-            <ImageView
-                android:id="@+id/iv_result_icon"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="24dp"
-                android:src="@drawable/ic_trophy"
-                android:contentDescription="Result Icon" />
+            android:background="#F8F9FA"
+            android:padding="24dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="16dp"
-                android:text="Kuis Selesai!"
-                android:textColor="#2E2E2E"
-                android:textSize="32sp"
-                android:textStyle="bold" />
+                android:layout_marginBottom="8dp"
+                android:text="Skor Anda"
+                android:textColor="#6C757D"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tv_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="8dp"
-                android:text="Skor Anda: 0/5"
-                android:textColor="#4CAF50"
-                android:textSize="28sp"
+                android:text="0/5"
+                android:textColor="#007BFF"
+                android:textSize="32sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tv_result_message"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="32dp"
-                android:gravity="center"
-                android:text="Hasil akan ditampilkan di sini"
-                android:textColor="#666666"
-                android:textSize="16sp" />
+        </LinearLayout>
 
-            <com.google.android.material.button.MaterialButton
+        <!-- Result Message -->
+        <TextView
+            android:id="@+id/tv_result_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:text="Hasil akan ditampilkan di sini"
+            android:textColor="#6C757D"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
                 android:id="@+id/btn_restart_quiz"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginBottom="12dp"
-                android:backgroundTint="#4CAF50"
-                android:text="Ulangi Kuis"
+                android:background="@drawable/bg_button_primary"
+                android:text="ULANGI KUIS"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
-                app:cornerRadius="12dp"
-                app:icon="@drawable/ic_refresh"
-                app:iconGravity="textStart"
-                app:iconPadding="8dp" />
+                android:elevation="2dp" />
 
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:id="@+id/btn_exit"
-                style="@style/Widget.Material3.Button.OutlinedButton"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:text="Keluar"
-                android:textColor="#666666"
-                android:textSize="18sp"
-                app:cornerRadius="12dp"
-                app:strokeColor="#666666" />
+                android:background="@drawable/bg_button_outline"
+                android:text="KELUAR"
+                android:textSize="16sp" />
 
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+        <!-- Achievement Badges -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,75 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
-    android:padding="24dp"
-    tools:context=".fragments.StartFragment">
+    android:orientation="vertical"
+    android:background="@drawable/bg_main"
+    android:padding="32dp"
+    android:gravity="center">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
+    <!-- Main Content Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical"
+        android:background="@drawable/bg_card"
+        android:padding="40dp"
+        android:elevation="4dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- App Icon -->
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/ic_quiz_colorful"
+            android:contentDescription="Quiz Icon" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="32dp">
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:text="Kuis Interaktif"
+            android:textColor="#212529"
+            android:textSize="28sp"
+            android:textStyle="bold" />
 
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="24dp"
-                android:src="@drawable/ic_quiz"
-                android:contentDescription="Quiz Icon" />
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:text="SQL &amp; Data Analysis"
+            android:textColor="#6C757D"
+            android:textSize="16sp" />
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:text="Uji pengetahuan Anda dengan 5 pertanyaan tentang SQL dan analisis data. Jawab dengan tepat untuk mendapatkan skor terbaik."
+            android:textColor="#6C757D"
+            android:textSize="14sp" />
+
+        <!-- Start Button -->
+        <Button
+            android:id="@+id/btn_start_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_button_primary"
+            android:text="MULAI KUIS"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:elevation="2dp" />
+
+        <!-- Info Section -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="16dp"
-                android:text="Kuis Interaktif"
-                android:textColor="#2E2E2E"
-                android:textSize="32sp"
-                android:textStyle="bold" />
+                android:text="5 Pertanyaan"
+                android:textColor="#ADB5BD"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:layout_marginHorizontal="12dp"
+                android:background="#DEE2E6" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="32dp"
-                android:gravity="center"
-                android:text="Uji pengetahuan Anda dengan 5 pertanyaan menarik!\nJawab dengan tepat untuk mendapatkan skor tertinggi."
-                android:textColor="#666666"
-                android:textSize="16sp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_start_quiz"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="16dp"
-                android:backgroundTint="#4CAF50"
-                android:text="Mulai Kuis"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:cornerRadius="12dp"
-                app:icon="@drawable/ic_play"
-                app:iconGravity="textStart"
-                app:iconPadding="8dp" />
+                android:text="~3 Menit"
+                android:textColor="#ADB5BD"
+                android:textSize="12sp" />
 
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

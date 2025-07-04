@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.kuisinteraktiffragment.MainActivity
 import com.example.kuisinteraktiffragment.R
-import com.example.kuisinteraktiffragment.databinding.FragmentQuestionBinding
+import com.example.kuisinteraktiffragment.databinding.FragmentQuestionSimpleBinding
 
 class Question1Fragment : Fragment() {
-    private var _binding: FragmentQuestionBinding? = null
+    private var _binding: FragmentQuestionSimpleBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -18,12 +18,14 @@ class Question1Fragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentQuestionBinding.inflate(inflater, container, false)
+        _binding = FragmentQuestionSimpleBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        android.util.Log.d("Question1Fragment", "onViewCreated called with ViewBinding")
 
         setupQuestion()
         setupListeners()
@@ -31,6 +33,8 @@ class Question1Fragment : Fragment() {
     }
 
     private fun setupQuestion() {
+        android.util.Log.d("Question1Fragment", "Setting up question 1")
+
         binding.tvQuestionNumber.text = "Pertanyaan 1 dari 5"
         binding.progressBar.progress = 1
         binding.tvQuestion.text = "Fungsi utama dari SQL (Structured Query Language) adalah...?"
@@ -39,6 +43,8 @@ class Question1Fragment : Fragment() {
         binding.radioOption2.text = "Mengedit gambar"
         binding.radioOption3.text = "Mengelola dan mengambil data dari database"
         binding.radioOption4.text = "Membuat animasi"
+
+        android.util.Log.d("Question1Fragment", "Question text: ${binding.tvQuestion.text}")
     }
 
     private fun setupListeners() {
@@ -52,14 +58,12 @@ class Question1Fragment : Fragment() {
             }
 
             if (selectedIndex != -1) {
-                // Save answer in MainActivity
                 (requireActivity() as MainActivity).answer1 = selectedIndex
                 binding.btnNext.isEnabled = true
             }
         }
 
         binding.btnNext.setOnClickListener {
-            // Navigate to Question2Fragment
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, Question2Fragment())
                 .addToBackStack(null)
